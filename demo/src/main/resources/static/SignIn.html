@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>  
+    <style>
+
+        body {
+            font-family: Arial; 
+            background-color: #EDEDE9;
+            margin: 0; 
+            padding: 0;  
+            display: flex;
+            justify-content: center; /* 水平方向上置中 */
+            align-items: center; /* 在垂直方向上置中 */
+            height: 100vh;  
+        }
+
+        .signin-container {
+            background-color: #F5EBE0; 
+            padding: 20px; /* 設置內邊相距20px */
+            border-radius: 8px; /* 設置橢圓角 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 設置陰影 */
+        }
+        .signin-container h2 {
+            margin-bottom: 20px;  
+            text-align: center; 
+            color: #B08968; 
+        }
+        .signin-container input[type="text"],
+        .signin-container input[type="password"] {
+            width: 100%;  
+            padding: 10px;  
+            margin-bottom: 15px;  
+            border: 1px solid #ccc;  
+            border-radius: 4px;  
+            box-sizing: border-box;  
+        }
+        .signin-container button {
+            width: 100%;  
+            padding: 10px; 
+            background-color: #D5BDAF;  
+            color: #fff;  
+            border: none; /* 移除邊框 */
+            border-radius: 4px;  
+            cursor: pointer; /* 設置滑鼠樣式為手型 */
+            transition: background-color 0.3s; /* 設置背景顏色變化的效果 */
+        }
+        .signin-container button:hover {
+            background-color: #B08968; /* 滑鼠懸停時的背景顏色 */
+            font-size: 18px;
+        }
+        .signin-container .register-btn {
+            text-align: center;  
+        }
+
+    </style> 
+
+</head>
+
+<body>
+    <div class="signin-container">
+        <h2>Login</h2>  
+        <form action="signin.php" method="POST"> 
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button> <!-- 登入按鈕 -->
+        </form>
+        <div class="register-btn"> <!-- 註冊按鈕 -->
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+        </div>
+</div>
+</body>
+</html>

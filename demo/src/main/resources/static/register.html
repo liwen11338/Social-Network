@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Resiter</title>  
+    <style>
+        body {
+            font-family: Arial; 
+            background-color: #EDEDE9;
+            margin: 0; 
+            padding: 0;  
+            display: flex;
+            justify-content: center; /* 水平方向上置中 */
+            align-items: center; /* 在垂直方向上置中 */
+        }
+
+        .register-container {
+            width: 800px;  
+            height: 600px;  
+            background-color: #F5EBE0;  
+            padding: 40px; /* 調整內邊距 */
+            border-radius: 8px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 設置陰影效果 */
+        }
+        .register-container h2 {
+            margin-bottom: 20px; /* 設置標題的下外邊距為20px */
+            text-align: center;  
+            font-size: 24px; /* 調整字體大小 */
+        }  
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"],
+        .register-container textarea {
+            width: 100%;  
+            padding: 10px; 
+            margin-bottom: 15px; 
+            border: 1px solid #ccc;  
+            border-radius: 4px;  
+            box-sizing: border-box;  
+            font-size: 16px;  
+        }
+        .register-container p {
+            width: 100%;  
+            padding: 10px;
+            color: #936639;     
+            font-size: 18px; /* 調整字體大小 */
+        } 
+
+        .register-container input[type="file"]{
+            width: 100%;  
+            padding: 10px; 
+            margin-bottom: 15px; 
+            border:none;
+            font-size: 16px; 
+        }
+        .register-container button {
+            width: 100%; 
+            padding: 10px;  
+            background-color: #D5BDAF;  
+            color: #fff;  
+            border: none;  
+            border-radius: 4px; 
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+            font-size: 18px; 
+        }
+        .register-container button:hover {
+            background-color: #B08968; 
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    
+    <div class="register-container">
+        <h2>註冊</h2>  
+        <form action="register.php" method="POST">
+            <input type="text" name="name" placeholder="姓名" required>  
+            <input type="text" name="id" placeholder="身分證號" required> 
+            <input type="email" name="email" placeholder="Email" required>  
+            <input type="password" name="password" placeholder="密碼" required> 
+            <textarea name="introduction" placeholder="自我介紹" rows="4"></textarea>  
+            <p>個人網站封面照 </p> 
+            <input type="file" name="profile_picture" id="profile-picture-input" accept="image/*" onchange="previewImage(event)"> <!-- 上傳照片並觸發預覽圖片的JavaScript函式 -->
+            <button type="submit">註冊</button> <!-- 註冊按鈕 -->   
+        </form>
+    </div>
+</body>
+</html>
